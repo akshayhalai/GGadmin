@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.ggadmin.fragment.homeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_sliderFragment"
+            app:destination="@id/sliderFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_productFragment2"
+            app:destination="@id/productFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/addproductFragment"
+        android:name="com.example.ggadmin.fragment.AddproductFragment"
+        android:label="fragment_addproduct"
+        tools:layout="@layout/fragment_addproduct" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.ggadmin.fragment.categoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/productFragment2"
+        android:name="com.example.ggadmin.fragment.productFragment"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product" >
+        <action
+            android:id="@+id/action_productFragment2_to_addproductFragment"
+            app:destination="@id/addproductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sliderFragment"
+        android:name="com.example.ggadmin.fragment.sliderFragment"
+        android:label="fragment_slider"
+        tools:layout="@layout/fragment_slider" />
+</navigation>
